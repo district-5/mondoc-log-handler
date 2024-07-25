@@ -48,7 +48,7 @@ $logger->pushHandler($handler);
 $logger->info('A test log from MondocLogHandler');
 $lastLogModel = $handler->getLastLog();
 
-echo $lastLogModel->getLogMessage(); // 'A test log from MondocLogHandler'
+echo $lastLogModel->getMessage(); // 'A test log from MondocLogHandler'
 
 ```
 
