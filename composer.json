@@ -1,0 +1,29 @@
+{
+  "name": "district5/mondoc-log-handler",
+  "description": "A Monolog compatible log handler for the Mondoc library.",
+  "keywords": ["district5", "library", "php", "mondocloghandler"],
+  "homepage": "https://github.com/district-5/php-mondoc-log-handler",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "District5",
+      "email": "hello@district5.co.uk"
+    }
+  ],
+  "require": {
+    "php": ">=8.1.0",
+    "ext-mongodb": "*",
+    "district5/mondoc": "*",
+    "mongodb/mongodb": "*",
+    "monolog/monolog": "*"
+  },
+  "autoload": {
+    "psr-4": { "District5\\MondocLogHandler\\": "src/" }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  },
+  "autoload-dev": {
+    "psr-4": { "District5Tests\\MondocLogHandlerTests\\": "tests/" }
+  }
+}

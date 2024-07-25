@@ -1,0 +1,35 @@
+name: CI
+on: [push]
+
+jobs:
+  unit-test:
+    name: Unit testing
+    runs-on: ubuntu-latest
+
+    concurrency:
+      group: tests-group
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install composer dependencies
+        uses: php-actions/composer@v6
+        with:
+          php_version: 8.3
+          args: --ignore-platform-reqs
+
+      - name: Run unit tests
+        uses: php-actions/phpunit@v3
+        env:
+          MONGO_CONNECTION_STRING: '${{ secrets.MONGO_CONNECTION_STRING }}'
+          XDEBUG_MODE: coverage
+        with:
+          version: 9.6
+          php_version: 8.3
+          php_extensions: "xdebug mongodb calendar sockets"
+          args: "-d date.timezone=UTC"
+          configuration: phpunit.xml
+          testsuite: TestSuite
+          bootstrap: tests/bootstrap.php
