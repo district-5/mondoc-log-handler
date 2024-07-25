@@ -1,6 +1,8 @@
 District5 - Mondoc log handler for Monolog
 ====
 
+![CI](https://github.com/district-5/mondoc-log-handler/actions/workflows/ci.yml/badge.svg?branch=master)
+
 This library is a Monolog handler that logs to a MongoDB collection using the
 [Mondoc](https://github.com/district-5/php-mondoc) library. It complements the Monolog library by providing a handler
 that logs to a MongoDB collection using Mondoc.

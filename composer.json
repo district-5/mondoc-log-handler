@@ -2,7 +2,7 @@
   "name": "district5/mondoc-log-handler",
   "description": "A Monolog compatible log handler for the Mondoc library.",
   "keywords": ["district5", "library", "php", "mondocloghandler"],
-  "homepage": "https://github.com/district-5/php-mondoc-log-handler",
+  "homepage": "https://github.com/district-5/mondoc-log-handler",
   "license": "mit",
   "authors": [
     {
